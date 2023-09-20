@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your repositories</title>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+<!-- Header ----------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="sidebar repositories" id="sidebar-repositories">
+  <div class="header-sidebar">
+  <img src="images/github-logo-sidebar.png" alt=""><div class="close-sidebar" id="close-sidebar-repositories"><img src="images/close-sidebar.png" alt=""></div></div>
+  <ul class="sidebar-list">
+    <li><img src="images/overview-icon.png" alt="">Home</li>
+    <li><img src="images/overview-icon.png" alt="">Issues</li>
+    <li><img src="images/overview-icon.png" alt="">Pull requests</li>
+    <li><img src="images/overview-icon.png" alt="">Discussions</li>
+  </ul>
+  <div class="horizontal-line"></div>
+  <ul class="sidebar-repositories">
+    <div class="body-sidebar"> <p>Repositories</p><div  class="search-sidebar"> <img src="images/search-sidebar.png"></div></div>
+    <li><img src="images/overview-icon.png" alt="">VitorRom/Alura-Clone</li>
+    <li><img src="images/overview-icon.png" alt="">VitorRom/Alura-Clone</li>
+    <li><img src="images/overview-icon.png" alt="">VitorRom/Alura-Clone</li>
+    <li><img src="images/overview-icon.png" alt="">VitorRom/Alura-Clone</li>
+    <li><img src="images/overview-icon.png" alt="">VitorRom/Alura-Clone</li>
+    <li><p id="show-more">Show more</p></li>
+  </ul>
+
+  <div class="sidebar-footer">
+  
+  <div class="horizontal-line"></div>
+  <ul class="sidebar-more">
+    <li><img src="images/overview-icon.png" alt="">Explore</li>
+    <li><img src="images/overview-icon.png" alt="">Marketplace</li>
+    <li><img src="images/overview-icon.png" alt="">Give new navigation feedback <div class="beta">Beta</div>
+    </li>
+  </ul>
+  <p id="git-inc">© 2023 GitHub, Inc.</p>
+  <ul class="list-sidebar-anchors">
+    <li><a href="">About</a></li>
+    <li><a href="">Blog</a></li>
+    <li><a href="">Terms</a></li>
+    <li><a href="">Privacy</a></li>
+    <li><a href="">Security</a></li>
+    <li><a href="">Status</a></li>
+  </ul>
+</div>
+</div>
+<div class="sidebar profile" id="sidebar-profile">
+  <ul class="sidebar-profile-list">
+    <div class="header-profile-sidebar"><img src="images/user-icon.png" alt=""> <p class="name sidebar-name">VitorRom</p><div class="close-sidebar" id="btn-close-profile-sidebar"> <img src="images/close-sidebar.png"></div></div>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <div class="horizontal-line"></div>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <div class="horizontal-line"></div>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <div class="horizontal-line"></div>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <div class="horizontal-line"></div>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <li><img src="images/overview-icon.png" alt="">Set status</li>
+    <div class="horizontal-line"></div>
+    <li><p id="sign-out">Sign-out</p></li>
+  </ul>
+</div>
+<header class="git-header">
+  
+  <div class="search-container">
+    <img id="img-menu" src="images/img-menu.png" alt="">
+    <img id="logo-git-hub" src="images/logo-github.png" alt="">
+    <div class="name">
+      <p>VitorRom</p>
+    </div>
+    <div class="input-wrapper">
+      <input class="input-search" type="text" placeholder="Type / to search">
+      <div class="vertical-line"></div>
+      <div class="search-arrow">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+          class="octicon octicon-command-palette" fill="#656d76">
+          <path
+            d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z">
+          </path>
+        </svg>
+      </div>
+    </div>
+    <div class="vertical-line header"></div>
+
+    <div class="btn-more"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+        data-view-component="true" class="octicon octicon-plus" fill="#656d76">
+        <path
+          d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z">
+        </path>
+      </svg><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+        class="octicon octicon-triangle-down" fill="#656d76">
+        <path
+          d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
+        </path>
+      </svg></div>
+    <div class="btn-messages">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+        class="octicon octicon-inbox color-fg-muted mr-0" fill="#656d76">
+        <path
+          d="M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z">
+        </path>
+      </svg>
+    </div>
+    <div class="user-icon"><img id="img-user-icon" src="images/user-icon.png" alt=""></div>
+  </div>
+  <div class="second-container-header">
+    <div class="container-header-list">
+      <ul>
+        <li class="list-overview ">
+          <div class="list-container overview "><img src="images/overview-icon.png" class="list-image img1"
+              alt="">Overview
+          </div>
+        </li>
+        <li class="list-repositories header-list-active">
+          <div class="list-container repositories"><img src="images/overview-icon2.png" class="list-image img2"
+              alt="">Repositories<div class="repositories-quantity">8</div>
+          </div>
+        </li>
+        <li class="list-projects">
+          <div class="list-container projects"><img src="images/overview-icon3.png" class="list-image img3"
+              alt="">Projects
+          </div>
+        </li>
+        <li class="list-packages">
+          <div class="list-container packages"><img src="images/overview-icon4.png" class="list-image img4"
+              alt="">Packages
+          </div>
+        </li>
+        <li class="list-stars">
+          <div class="list-container stars"><img src="images/overview-icon5.png" class="list-image img5" alt="">Stars
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="invisible-field"></div>
+    <div class="new-repository">
+      <ul>
+        <li><img src="images/overview-icon.png" alt="">New repository</li>
+        <li><img src="images/overview-icon.png" alt="">Import repository</li>
+        <div class="horizontal-line header-list"></div>
+        <li><img src="images/overview-icon.png" alt="">New repository</li>
+        <li><img src="images/overview-icon.png" alt="">Import repository</li>
+        <div class="horizontal-line header-list"></div>
+        <li><img src="images/overview-icon.png" alt="">New repository</li>
+        <li><img src="images/overview-icon.png" alt="">Import repository</li>
+      </ul>
+    </div>
+  </div>
+  
+</header>
+
+<!-- Home ----------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+  <section class="home">
+    <div class="profile-container">
+      <div class="image-profile">
+        <img src="images/logo-user.png" alt="">
+        <div class="set-status">
+          <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+            aria-hidden="true">
+            <path
+              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm3.82 1.636a.75.75 0 0 1 1.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 0 1 1.222.87l-.022-.015c.02.013.021.015.021.015v.001l-.001.002-.002.003-.005.007-.014.019a2.066 2.066 0 0 1-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.331 3.331 0 0 1-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 0 1 .183-1.044ZM12 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.25 2.25.592.416a97.71 97.71 0 0 0-.592-.416Z"
+              fill="gray"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="home-name">VitorRom</div>
+      <button class="btn-edit-profile">Edit Profile</button>
+    </div>
+    </div>
+    <div class="repositories-container">
+      <div class="search-repositories">
+
+        <input type="text" placeholder="Find a repository...">
+        <button class="btn-search-repositories type">Type <img src="images/arrow-btn-repositories.png" alt=""></button>
+        <button class="btn-search-repositories language">Language <img src="images/arrow-btn-repositories.png"
+            alt=""></button>
+        <button class="btn-search-repositories sort">Sort<img src="images/arrow-btn-repositories.png" alt=""></button>
+        <button class="btn-search-repositories new"><img src="images/new-repository.png" alt="">New</button>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="name-and-type">
+        <a class="name-repositories">Portifólio-Romano-Joao</a>
+        <div class="type-repositories">Public</div>
+      </div>
+      <div class="about-the-project">
+        <div class="project-description">
+          <p>Em meu portfólio, seleciono minuciosamente projetos que retratam minha evolução e progresso como
+            desenvolvedor web. Cada empreendimento narra uma narrativa singular, evidenciando as tecnologias
+            ado…</p>
+        </div>
+        <div class="project-progress">
+          <div class="btns-project-progress">
+            <button class="btn favorite"><img src="images/overview-icon5.png" alt="">Star</button>
+            <button class="btn progress-lists"><img src="images/arrow-btn-repositories.png" alt=""></button>
+          </div>
+          <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+            <svg width="155" height="30">
+              <defs>
+                <linearGradient id="gradient-692102102" x1="0" x2="0" y1="1" y2="0">
+                  <stop offset="0%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                  <stop offset="10%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                  <stop offset="25%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                  <stop offset="50%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+                </linearGradient>
+                <mask id="sparkline-692102102" x="0" y="0" width="155" height="28">
+                  <polyline transform="translate(0, 28) scale(1,-1)"
+                    points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,2 "
+                    fill="transparent" stroke="#8cc665" stroke-width="2">
+                  </polyline>
+                </mask>
+              </defs>
+
+              <g transform="translate(0, -12)">
+                <rect x="0" y="-2" width="155" height="30"
+                  style="stroke: none;fill:#99e2a9;mask: url(#sparkline-692102102);"></rect>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="language-and-last-update">
+        <img src="images/color-css.png" alt="">
+        <p>CSS</p>
+        <p class="last-update">Updated 4 days ago</p>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="name-and-type">
+        <a class="name-repositories">Portifólio-Romano-Joao</a>
+        <div class="type-repositories">Public</div>
+      </div>
+      <div class="about-the-project">
+        <div class="project-description">
+          <p>Em meu portfólio, seleciono minuciosamente projetos que retratam minha evolução e progresso como
+            desenvolvedor web. Cada empreendimento narra uma narrativa singular, evidenciando as tecnologias
+            ado…</p>
+        </div>
+        <div class="project-progress">
+          <div class="btns-project-progress">
+            <button class="btn favorite"><img src="images/overview-icon5.png" alt="">Star</button>
+            <button class="btn progress-lists"><img src="images/arrow-btn-repositories.png" alt=""></button>
+          </div>
+          <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+            <svg width="155" height="30">
+              <defs>
+                <linearGradient id="gradient-681759928" x1="0" x2="0" y1="1" y2="0">
+                  <stop offset="0%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                  <stop offset="10%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                  <stop offset="25%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                  <stop offset="50%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+                </linearGradient>
+                <mask id="sparkline-681759928" x="0" y="0" width="155" height="28">
+                  <polyline transform="translate(0, 28) scale(1,-1)"
+                    points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,13 147,1 150,1 153,1 "
+                    fill="transparent" stroke="#8cc665" stroke-width="2">
+                  </polyline>
+                </mask>
+              </defs>
+
+              <g transform="translate(0, -6)">
+                <rect x="0" y="-2" width="155" height="30"
+                  style="stroke: none;fill: #99e2a9;mask: url(#sparkline-681759928);"></rect>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="language-and-last-update">
+        <img src="images/color-css.png" alt="">
+        <p>CSS</p>
+        <p class="last-update">Updated 4 days ago</p>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="name-and-type">
+        <a class="name-repositories">Portifólio-Romano-Joao</a>
+        <div class="type-repositories">Public</div>
+      </div>
+      <div class="about-the-project">
+        <div class="project-description">
+          <p>Em meu portfólio, seleciono minuciosamente projetos que retratam minha evolução e progresso como
+            desenvolvedor web. Cada empreendimento narra uma narrativa singular, evidenciando as tecnologias
+            ado…</p>
+        </div>
+        <div class="project-progress">
+          <div class="btns-project-progress">
+            <button class="btn favorite"><img src="images/overview-icon5.png" alt="">Star</button>
+            <button class="btn progress-lists"><img src="images/arrow-btn-repositories.png" alt=""></button>
+          </div>
+          <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+            <svg width="155" height="30">
+              <defs>
+                <linearGradient id="gradient-692102102" x1="0" x2="0" y1="1" y2="0">
+                  <stop offset="0%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                  <stop offset="10%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                  <stop offset="25%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                  <stop offset="50%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+                </linearGradient>
+                <mask id="sparkline-692102102" x="0" y="0" width="155" height="28">
+                  <polyline transform="translate(0, 28) scale(1,-1)"
+                    points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,2 "
+                    fill="transparent" stroke="#8cc665" stroke-width="2">
+                  </polyline>
+                </mask>
+              </defs>
+
+              <g transform="translate(0, -12)">
+                <rect x="0" y="-2" width="155" height="30"
+                  style="stroke: none;fill:#99e2a9;mask: url(#sparkline-692102102);"></rect>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="language-and-last-update">
+        <img src="images/color-css.png" alt="">
+        <p>CSS</p>
+        <p class="last-update">Updated 4 days ago</p>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="name-and-type">
+        <a class="name-repositories">Portifólio-Romano-Joao</a>
+        <div class="type-repositories">Public</div>
+      </div>
+      <div class="about-the-project">
+        <div class="project-description">
+          <p>Em meu portfólio, seleciono minuciosamente projetos que retratam minha evolução e progresso como
+            desenvolvedor web. Cada empreendimento narra uma narrativa singular, evidenciando as tecnologias
+            ado…</p>
+        </div>
+        <div class="project-progress">
+          <div class="btns-project-progress">
+            <button class="btn favorite"><img src="images/overview-icon5.png" alt="">Star</button>
+            <button class="btn progress-lists"><img src="images/arrow-btn-repositories.png" alt=""></button>
+          </div>
+          <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+            <svg width="155" height="30">
+              <defs>
+                <linearGradient id="gradient-692102102" x1="0" x2="0" y1="1" y2="0">
+                  <stop offset="0%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                  <stop offset="10%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                  <stop offset="25%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                  <stop offset="50%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+                </linearGradient>
+                <mask id="sparkline-692102102" x="0" y="0" width="155" height="28">
+                  <polyline transform="translate(0, 28) scale(1,-1)"
+                    points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,2 "
+                    fill="transparent" stroke="#8cc665" stroke-width="2">
+                  </polyline>
+                </mask>
+              </defs>
+
+              <g transform="translate(0, -12)">
+                <rect x="0" y="-2" width="155" height="30"
+                  style="stroke: none;fill:#99e2a9;mask: url(#sparkline-692102102);"></rect>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="language-and-last-update">
+        <img src="images/color-css.png" alt="">
+        <p>CSS</p>
+        <p class="last-update">Updated 4 days ago</p>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="name-and-type">
+        <a class="name-repositories">Portifólio-Romano-Joao</a>
+        <div class="type-repositories">Public</div>
+      </div>
+      <div class="about-the-project">
+        <div class="project-description">
+          <p>Em meu portfólio, seleciono minuciosamente projetos que retratam minha evolução e progresso como
+            desenvolvedor web. Cada empreendimento narra uma narrativa singular, evidenciando as tecnologias
+            ado…</p>
+        </div>
+        <div class="project-progress">
+          <div class="btns-project-progress">
+            <button class="btn favorite"><img src="images/overview-icon5.png" alt="">Star</button>
+            <button class="btn progress-lists"><img src="images/arrow-btn-repositories.png" alt=""></button>
+          </div>
+          <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+            <svg width="155" height="30">
+              <defs>
+                <linearGradient id="gradient-692102102" x1="0" x2="0" y1="1" y2="0">
+                  <stop offset="0%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                  <stop offset="10%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                  <stop offset="25%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                  <stop offset="50%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+                </linearGradient>
+                <mask id="sparkline-692102102" x="0" y="0" width="155" height="28">
+                  <polyline transform="translate(0, 28) scale(1,-1)"
+                    points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,2 "
+                    fill="transparent" stroke="#8cc665" stroke-width="2">
+                  </polyline>
+                </mask>
+              </defs>
+
+              <g transform="translate(0, -12)">
+                <rect x="0" y="-2" width="155" height="30"
+                  style="stroke: none;fill:#99e2a9;mask: url(#sparkline-692102102);"></rect>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="language-and-last-update">
+        <img src="images/color-css.png" alt="">
+        <p>CSS</p>
+        <p class="last-update">Updated 4 days ago</p>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="name-and-type">
+        <a class="name-repositories">Portifólio-Romano-Joao</a>
+        <div class="type-repositories">Public</div>
+      </div>
+      <div class="about-the-project">
+        <div class="project-description">
+          <p>Em meu portfólio, seleciono minuciosamente projetos que retratam minha evolução e progresso como
+            desenvolvedor web. Cada empreendimento narra uma narrativa singular, evidenciando as tecnologias
+            ado…</p>
+        </div>
+        <div class="project-progress">
+          <div class="btns-project-progress">
+            <button class="btn favorite"><img src="images/overview-icon5.png" alt="">Star</button>
+            <button class="btn progress-lists"><img src="images/arrow-btn-repositories.png" alt=""></button>
+          </div>
+          <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+            <svg width="155" height="30">
+              <defs>
+                <linearGradient id="gradient-692102102" x1="0" x2="0" y1="1" y2="0">
+                  <stop offset="0%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                  <stop offset="10%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                  <stop offset="25%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                  <stop offset="50%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+                </linearGradient>
+                <mask id="sparkline-692102102" x="0" y="0" width="155" height="28">
+                  <polyline transform="translate(0, 28) scale(1,-1)"
+                    points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,2 "
+                    fill="transparent" stroke="#8cc665" stroke-width="2">
+                  </polyline>
+                </mask>
+              </defs>
+
+              <g transform="translate(0, -12)">
+                <rect x="0" y="-2" width="155" height="30"
+                  style="stroke: none;fill:#99e2a9;mask: url(#sparkline-692102102);"></rect>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="language-and-last-update">
+        <img src="images/color-css.png" alt="">
+        <p>CSS</p>
+        <p class="last-update">Updated 4 days ago</p>
+      </div>
+      <div class="horizontal-line" style="margin-bottom: 40px;"></div>
+    </div>
+
+  </section>
+
+
+  <!-- Footer ----------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+  <footer>
+    <div class="horizontal-line footer"></div>
+    <div class="footer-container">
+      <ul>
+        <li>
+          <div class="footer-logo"><img src="images/logo-github-footer.png" alt="">© 2023 GitHub, Inc.</div>
+        </li>
+        <li><a href="">Terms</a></li>
+        <li><a href="">Privacy</a></li>
+        <li><a href="">Security</a></li>
+        <li><a href="">Status</a></li>
+        <li><a href="">Docs</a></li>
+        <li><a href="">Contact GitHub</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">Training</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+<script src="script.js"></script>

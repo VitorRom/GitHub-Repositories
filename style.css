@@ -1,0 +1,751 @@
+:root {
+    --borderWidth-thin: max(1px, 0.0625rem);
+    --color-border-default: #d0d7de;
+    --color-primer-shadow-inset: inset 0 1px 0 rgba(208, 215, 222, 0.2);
+    --color-btn-shadow: 0 1px 0 rgba(31, 35, 40, 0.04);
+}
+
+
+
+body {
+    width: 100%;
+    max-width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(101, 103, 105, 0.103);
+    z-index: 99;
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Header ----------------------------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: baseline;
+    width: 100%;
+    height: 67px;
+    background-color: #f6f8fa;
+    box-shadow: inset 0 calc(var(--borderWidth-thin, 1px)*-1) #d0d7de;
+    padding: 15px 0px 22px 0px;
+}
+
+#img-menu {
+    padding-right: 15px;
+}
+
+#logo-git-hub {
+    padding-right: 15px;
+}
+
+.name {
+    width: 400px;
+    margin-right: 34.5%;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.search-container {
+    max-width: 100%;
+    width: 99%;
+    display: flex;
+    height: 33px;
+    align-items: center;
+    margin-bottom: 9.4px;
+}
+
+.search-container,
+.container-header-list {
+    padding-left: 15px;
+}
+
+.search-container p {
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f8fa;
+    width: 340px;
+    border: 1px solid rgb(207, 207, 207);
+    height: 30px;
+    background-image: url(/images/magnifying-glass-search.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    box-shadow: var(--shadow-inset, var(--color-primer-shadow-inset));
+    border-radius: 5px;
+    background-size: 14px;
+    background-position-x: 7px;
+    padding: 0px 0px 0px 20px;
+}
+
+.input-search {
+    border: none;
+    background-color: #f6f8fa;
+    width: 295px;
+
+}
+
+.input-search:focus-visible {
+    outline: none;
+}
+
+.input-search::placeholder {
+    font-size: .83rem;
+    padding-left: 5px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 15px;
+    background-color: #d8d8d8;
+    margin: 0px 3px 0px 10px;
+}
+
+.search-arrow {
+    height: 84%;
+    width: 27px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #656d76;
+}
+
+.octicon.octicon-command-palette {
+    color: #656d76;
+    ;
+}
+
+.search-arrow:hover {
+    background-color: #eaedf1
+}
+
+.vertical-line.header {
+    margin-right: 10px;
+    height: 21px;
+}
+
+.btn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 53px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+.btn-more:hover {
+    background-color: #eaedf1
+}
+
+.btn-messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid rgb(207, 207, 207);
+    height: 30px;
+    width: 30px;
+    margin: 0px 7px 0px 7px;
+}
+
+.btn-messages:hover {
+    background-color: #eaedf1
+}
+
+.user-icon {
+    margin-top: 5px;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    height: 30px;
+    width: 110%;
+}
+
+.list-container:hover {
+    background-color: #eaedf1
+}
+
+.list-container img {
+    height: 14px;
+    width: 16px;
+    margin-bottom: -1px;
+}
+
+.list-image.img2 {
+    width: 12px;
+    height: 16px;
+}
+
+.list-image.img3 {
+    height: 15.5px;
+}
+
+.list-image.img4 {
+    height: 16px;
+    width: 14px;
+}
+
+.list-image.img5 {
+    height: 15px;
+}
+
+.second-container-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-header-list ul {
+    display: flex;
+    list-style: none;
+    font-size: .84rem;
+    height: 43px;
+    width: 700px;
+}
+
+.container-header-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 9px 2px 9px 2px;
+    letter-spacing: .2px;
+}
+
+.container-header-list ul li.header-list-active {
+    border-bottom: 2px solid #fd8c73;
+    margin-bottom: -4px;
+    font-weight: 500;
+}
+
+.invisible-field {
+    height: 100%;
+    width: 500px;
+    margin-left: 23.5%;
+}
+
+.new-repository {
+    width: 190px;
+    height: 240px;
+    position: absolute;
+    top: 52px;
+    font-size: .9rem;
+    background-color: white;
+    box-shadow: 1px 1px 10px 2px rgb(231, 231, 231);
+    border-radius: 8px;
+    right: 90px;
+    display: none;
+    justify-content: center;
+}
+
+.new-repository ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.new-repository ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    margin: 0px 10px 0px 10px;
+    list-style: none;
+    border-radius: 7px;
+}
+
+.new-repository ul li:hover {
+    background-color: #f3f4f6;
+}
+
+
+.horizontal-line.header-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.repositories-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+    width: 20px;
+    background-color: #e8ebef;
+    height: 20px;
+    border-radius: 15px;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+#img-menu,
+#img-menu,
+#logo-git-hub,
+.search-arrow,
+.octicon,
+#img-user-icon,
+.container-header-list ul li {
+    cursor: pointer;
+}
+
+#img-user-icon {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+/*Sidebar --------------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    height: 96%;
+    z-index: 100;
+    background-color: white;
+    color: #656d76;
+    border: 1px solid rgb(207, 207, 207);
+    border-top: none;
+    transition: all ease .3s;
+
+}
+
+.sidebar.repositories {
+    left: 0px;
+    border-radius: 0px 13px 13px 13px;
+    padding: 15px !important;
+    width: 290px;
+}
+
+.sidebar.profile {
+    padding: 0px 15px 0px 15px;
+    right: 0px;
+    height: 100%;
+    width: 285px;
+    border-radius: 13px 0px 0px 13px;
+}
+
+.sidebar-profile-list {
+    margin-top: 10px;
+}
+
+.sidebar-profile-list .horizontal-line{
+    margin: 8px 0px 8px 0px;
+}
+
+.sidebar-profile-list li{
+    margin-bottom: 0px;
+}
+
+.header-profile-sidebar{
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.name.sidebar-name{
+    width: 100px;
+   
+}
+
+.header-sidebar,
+.body-sidebar,
+.header-profile-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-sidebar,
+.search-sidebar {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #f3f4f6;
+}
+
+.close-sidebar:hover,
+.search-sidebar:hover {
+    background-color: #e4e4e4;
+
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 15px 0px 0px 0px;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .9rem;
+    padding: 6px 6px 6px 6px;
+    border-radius: 5px;
+}
+
+.sidebar-repositories p,
+#show-more {
+    font-size: .78rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.sidebar-repositories li:hover,
+.sidebar-list li:hover,
+.sidebar-more li:hover,
+.sidebar-profile-list li:hover {
+    background-color: #f3f4f6;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 10px;
+}
+
+#git-inc {
+    margin-top: 10px;
+    font-size: .75rem;
+}
+
+.beta {
+    border: 1px solid green;
+    text-align: center;
+    line-height: 18px;
+    font-size: .77rem;
+    color: green;
+    font-weight: 500;
+    border-radius: 9px;
+    width: 35px;
+    height: 18px;
+}
+
+.list-sidebar-anchors {
+    display: flex;
+}
+
+.list-sidebar-anchors a {
+    font-size: .7rem;
+    color: #0969da;
+    text-decoration: none;
+}
+
+.list-sidebar-anchors ul:hover {
+    background-color: white;
+}
+
+
+
+/*Body ----------------------------------------------------------------------------------------*/
+
+.home {
+    display: flex;
+    margin-top: 30px;
+}
+
+.profile-container {
+    margin: 10px -15px 0px 0px;
+    width: 340px;
+}
+
+.image-profile {
+    display: flex;
+
+}
+
+.set-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    position: relative;
+    top: 230px;
+    right: 40px;
+    cursor: pointer;
+    border: 1px solid rgb(202, 202, 202);
+    width: 50px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.home-name {
+    margin-top: 10px;
+    color: rgb(143, 143, 143);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.btn-edit-profile {
+    width: 88%;
+    font-weight: 600;
+    height: 33px;
+    color: #2b3035;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #f8fafb;
+    border: 1px solid #d6d8db;
+}
+
+.btn-edit-profile:hover {
+    background-color: #f3f4f6;
+}
+
+.repositories-container {
+    width: 900px
+}
+
+.repositories-container input {
+    width: 490px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #d6d8db;
+    margin-right: 15px;
+    letter-spacing: .4px;
+}
+
+.repositories-container input:focus-visible {
+    outline: 2px solid #0969da;
+}
+
+.search-repositories {
+    display: flex;
+}
+
+.btn-search-repositories {
+    width: 80px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: #f6f8fa;
+    color: #43484d;
+    border: 1px solid #d6d8db;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+.btn-search-repositories:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-search-repositories img {
+    margin-top: 4px;
+    padding-left: 5px;
+}
+
+.btn-search-repositories.language {
+    width: 110px;
+}
+
+.btn-search-repositories.sort {
+    width: 78px;
+}
+
+.btn-search-repositories.new {
+    color: white;
+    margin-left: 12px;
+    gap: 5px;
+    width: 85px;
+    background-color: #1f883d;
+}
+
+.btn-search-repositories.new img {
+    margin-top: 0px;
+    padding-left: 0px;
+}
+
+.btn-search-repositories.new:hover {
+    background-color: #1a7f37;
+}
+
+.horizontal-line {
+    margin-top: 15px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(209, 209, 209);
+}
+
+
+
+.name-and-type {
+    display: flex;
+    align-items: center;
+    margin: 27px 0px 7px 0px;
+    gap: 10px;
+}
+
+.name-repositories {
+    text-decoration: none;
+    color: #0969da;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.name-repositories:hover {
+    text-decoration: underline;
+}
+
+.type-repositories {
+    border-radius: 15px;
+    color: gray;
+    line-height: 17px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .7rem;
+    width: 45px;
+    height: 17px;
+    border: 1px solid #d6d8db;
+}
+
+.about-the-project {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-description {
+    width: 480px;
+    font-size: .83rem;
+    line-height: 20px;
+    color: #656d76;
+    letter-spacing: .3px;
+}
+
+.project-progress {
+    display: grid;
+    gap: 35px;
+}
+
+.btns-project-progress {
+    display: flex;
+    justify-content: end;
+    margin-top: -20px;
+}
+
+.btn {
+    height: 27px;
+    width: 70px;
+    background-color: #f6f8fa;
+    border: 1px solid #d6d8db;
+    display: flex;
+    font-weight: 600;
+    font-size: .7rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px 0px 0px 6px;
+    box-shadow: var(--button-default-shadow-resting, var(--color-btn-shadow)), var(--button-default-shadow-inset, var(--color-btn-inset-shadow));
+}
+
+.btn:hover {
+    background-color: #f3f4f6;
+
+}
+
+.btn.progress-lists {
+    border-radius: 0px 6px 6px 0px;
+    width: 32px;
+    border-left: none;
+}
+
+.language-and-last-update {
+    display: flex;
+    font-size: .75rem;
+    line-height: 20px;
+    color: #656d76;
+}
+
+.last-update {
+    margin-left: 20px;
+}
+
+
+/*Footer ----------------------------------------------------------------------------------------*/
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizontal-line.footer {
+    width: 1250px;
+}
+
+footer ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    height: 100px;
+    width: 1250px;
+    gap: 45px;
+}
+
+footer li {
+    font-size: 0.75rem;
+    color: #656d76;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #0969da;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-right: 20px;
+}
+
+@media (min-width: 1600px) {
+    header {
+        align-items: center;
+    }
+
+    .search-container {
+        justify-content: center;
+    }
+}
